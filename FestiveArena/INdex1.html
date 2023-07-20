@@ -1,0 +1,561 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festive Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_admin.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="Images/LOgo1.jpg" class="logoh" alt="ISSue"></a>
+        <div>
+            <u1 id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </u1>
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-* shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login
+            </button>
+            <button type="button" class="btn btn-outine-* shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+                SIGN-IN
+            </button>
+        
+        </div>
+    </section>
+    <section class="register">
+        <!-- LOGIN MODAL -->
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="login-form" class="frm">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center">
+                                <i class="bi bi-person-circle mr-3"></i>
+                                 User Login
+                            </h5>
+                            <button type="reset" class="bi bi-x" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3 mt-4">
+                                <label class="form-label">Email / Mobile</label>
+                                <input type="text" name="email_mob" required class="form-control shadow-none">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="pass" required class="form-control shadow-none">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-3 mt-4">
+                                <a href="INdex.html" class="btn btn-outline-* shadow-none" >LOGIN</a>
+                                <a href="javascript: void(0)" class="btn text-decoration-none">Forgot Password</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- REGISTER MODAL -->
+        <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form id="register-form" class="frm">
+                        <div class="modal-header">
+                            <h5 class="modal-title d-flex align-items-center">
+                                <i class="bi bi-person-lines-fill"></i>
+                                USER SIGN-IN
+                            </h5>
+                            <button type="reset" class="bi bi-x" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center">
+                                <span class="badge rounded-pill bg-light text-dark mb-3 mt-2 text-wrap lh-base me-3">Note:
+                                    Your
+                                    details
+                                    must match your ID (Aadhaar card, passport, driving license, etc)
+                                </span>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input name="name" type="text" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email address</label>
+                                        <input name="email" type="email" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input name="phonenum" type="number" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Picture</label>
+                                        <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp"
+                                            class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">Address</label>
+                                        <textarea name="address" class="form-control shadow-none mb-3" rows="2"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pincode</label>
+                                        <input name="pincode" type="number" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date of birth</label>
+                                        <input name="dob" type="date" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input name="pass" type="password" class="form-control shadow-none" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input name="cpass" type="password" class="form-control shadow-none" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center my-1">
+                                <a href="INdex.html" class="btn btn-outline-* shadow-none">SIGN-IN</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value Deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with Coupons & up to 70% off! </p>
+        <button>Shop Now</button>
+    </section>
+    <section id="feature" class="section-p1">
+
+        <div class="fe-box">
+            <img src="Images/Free shipping.jpg" alt="">
+            <h6 class="fe-box-name">Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/Online order.jpg" alt="">
+            <h6 class="fe-box-name">Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/save money.jpg" alt="">
+            <h6 class="fe-box-name">Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/Promotions.jpg" alt="">
+            <h6 class="fe-box-name">Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/happy self.jpg" alt="">
+            <h6 class="fe-box-name">Happy Sell</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="Images/Service .jpg" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+
+    </section>
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Modern Decoratives</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html';">
+                <img src="Images/3DOME Led Light Candles $389.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>LED Light Candles</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$389</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct1.html';">
+                <img src="Images/Cadbury Celebrations Premium Gift packing $300 .jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Cadbury Celebrations</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$300</h4>
+                </div>
+                <a href="#"><i class="fa-bag-shopping"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct2.html';">
+                <img src="Images/CHOCOCHILL special Crackers $279.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Crackers</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$279</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct3.html';">
+                <img src="Images/Christmas Ornament $249.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Ornament</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$249</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct4.html';">
+                <img src="Images/DesiDiya 5 Meter 300 led RGBstrip  $699.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Led RGBstrip</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$699</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct5.html';">
+                <img src="Images/Haldiram's Gulaab Jaamun (1kg) $188.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Gulaab Jaamun</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$188</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct6.html';">
+                <img src="Images/Haldiram's Kaju Katli (500 g) $421.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Kaju Katli</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$421</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct7.html';">
+                <img src="Images/Halloween Lantern Lamp (Pack of 2) $399.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Lantern Lamp</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$399</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+
+        </div>
+    </section>
+    <section id="banner">
+        <h4>Repair Services </h4>
+        <h2>Up to <span>70% Off</span> - All Decoratives & Things</h2>
+        <a href="shop.html"><button class="normal">Explore More</button></a>
+
+        </h2>
+    </section>
+    <section id="product1" class="section-p1">
+        <h2>Festive Arrivals</h2>
+        <p>Modern Decoratives</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct8.html';">
+                <img src="Images/HAZEL Stainless Steel Puja Thali $999.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Puja Thali</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$999</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct9.html';">
+                <img src="Images/LAl sweets Mysore Pak 400g $359 .jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Mysore Pak</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$359</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct10.html';">
+                <img src="Images/Lexton 40 Feet LED String Light.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Led string light</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$699</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct11.html';">
+                <img src="Images/Quace Christmas Snow Bulb String lights(10) $599.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>String Lights</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$599</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct12.html';">
+                <img src="Images/SHOPEE Artificial FLowers(Multicolour , 8 piece , 5.5feet) $499.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Artificial Flowers</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$499</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct13.html';">
+                <img src="Images/Swaha Ghee diya (100 pieces) $299.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Ghee Diya</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$299</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct14.html';">
+                <img src="Images/The Banner Company's Black Bat $280.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Banner</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$280</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct15.html';">
+                <img src="Images/Treo Milton Brass Diya $465 .jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5> Brass Diya</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$465</h4>
+                </div>
+                <a href="#"><i class=""></i></a>
+            </div>
+
+        </div>
+    </section>
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Offers</h4>
+            <h2>Buy 1 get 1 free</h2>
+            <span>The best quality products to make your special occations more special</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box">
+            <h4>Upcoming Decoratives</h4>
+            <h2>upcoming season</h2>
+            <span>The best quality products to make your special occations more special</span>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>FESTIVAL SALE</h2>
+            <h3>MAHA Aarti Collection -50%</h3>
+
+        </div>
+        <div class="banner-box  banner-box2">
+            <h2>FESTIVAL SALE</h2>
+            <h3>MAHA Aarti Collection -50%</h3>
+
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>FESTIVAL SALE</h2>
+            <h3>MAHA Aarti Collection -50%</h3>
+
+        </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src=" " alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 345, udaipur highway,udaipur, Rajasthan ,India</p>
+            <p><strong>Phone:</strong> +9754844541 / 6564472337</p>
+            <p><strong>Hours:</strong> 10:00 - 7:00 , Mon - Fri</p>
+            <div class="follow"></div>
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#"> About Us</a>
+            <a href="#"> Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#"> Terms & Conditions</a>
+            <a href="#"> Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#"> Sign Up</a>
+            <a href="#">view cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="" alt="arr">
+                <img src="" alt="arr">
+
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="" alt="arr">
+
+        </div>
+        <div class="copyright">
+            <p>2022, Festive Arena.com </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
